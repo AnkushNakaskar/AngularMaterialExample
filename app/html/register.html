@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<script src="../../bower_components/angular/angular.js"></script>
+	<script src="../../bower_components/angular-material/angular-material.js"></script>
+
+	<script src="../../bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="../../bower_components/angular-aria/angular-aria.min.js"></script>
+	<script src="../../app/js/app.js"></script>
+	<script src="../../app/js/controller/registerPersonController.js"></script>
+	<head>
+		<link rel="stylesheet" href="../../bower_components/angular-material/angular-material.min.css">
+		<link rel="stylesheet" href="../../app/css/register_person.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<title>Register Person</title>
+	</head>
+	<body ng-app="myPerson">
+		<div ng-controller="registerPersonController">
+			<div class="register_page" layout="row" layout-align="center center">
+				<div flex="20"></div>
+				<div flex="60">
+					<md-card>
+						<md-card-content>
+							<form class="register_form" name="register_form">
+								<div layout="row" layout-align="center">
+									<md-input-container>
+										<md-icon md-svg-src="../../bower_components/material-design-icons/social/svg/design/ic_person_24px.svg" class="name"></md-icon>
+										<label>User name</label>
+										<input  required  name="username" ng-model="person.username">
+									</md-input-container>
+								</div>
+								<div layout="column" >
+									<div layout="row" layout-align="center" >
+										<md-input-container >
+										<md-icon>email</md-icon>
+											<label>Email</label>
+											<input  required  name="email" ng-model="person.email">
+										</md-input-container>
+									</div>
+								</div>
+								<div layout="column">
+									<div layout="row" layout-align="center">
+										<md-input-container>
+											<label>Phone number</label>
+											<input  required  name="phone" ng-model="person.phone">
+										</md-input-container>
+									</div>
+								</div>
+
+								<div layout="column" >
+									<div layout="row" layout-align="center">
+										<md-input-container>
+											<label>Company Name</label>
+											<input  required  name="companyName" ng-model="person.companyName">
+										</md-input-container>
+									</div>
+								</div>
+
+							</form>
+						</md-card-content>
+					</md-card>
+
+				</div>
+				<div flex="20"></div>
+			</div>
+		</div>
+	</body>
+</html>

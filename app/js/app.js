@@ -1,2 +1,3 @@
-var myApp =angular.module('myPerson',['ngMaterial'])
+var myApp =angular.module('myPerson',['ngMaterial']);
+
 
