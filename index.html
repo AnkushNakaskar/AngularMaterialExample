@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html>
-    
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-material/angular-material.js"></script>
-    
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-    <script src="app/js/app.js"></script>
-    <script src="app/js/controller/loginController.js"></script>
-    <head>
-        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-        <title>Home page</title>
-    </head>
-    <body ng-app ="myPerson">
-        <div class="login_page" ng-controller="loginController">
-            
-        </div>
-    </body>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-material/angular-material.js"></script>
+
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+	<script src="app/js/app.js"></script>
+	<script src="app/js/controller/loginController.js"></script>
+	<head>
+		<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+		<link rel="stylesheet" href="app/css/login.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<title>Home page</title>
+	</head>
+	<body ng-app ="myPerson">
+		<div class="login_page" ng-controller="loginController" >
+
+			<div layout="column" layout-align="center center">
+				<md-card>
+					<md-card-content>
+						<form class="login_form" name="login_form">
+							<div>
+								<md-input-container>
+									<md-icon>
+										person
+									</md-icon>
+									<label>User name</label>
+									<input  type="text"  name="username" ng-model="person.username">
+								</md-input-container>
+							</div>
+							<div>
+								<md-input-container>
+									<md-icon>
+										lock
+									</md-icon>
+									<label>Password</label>
+									<input  type="password"  name="password" ng-model="person.password">
+								</md-input-container>
+							</div>
+							<div layout="coulmn" layout-align="center center">
+								<md-button ng-disabled="!login_form.$valid" ng-click="submit()" class="md-raised md-primary">
+									&nbsp Login &nbsp
+								</md-button>
+							</div>
+							<div layout="row" layout-align="space-around center">
+								<div><a href="app/html/register.html" class="sign_up_link">Sign Up</a></div>
+								<div><a href="app/html/forgot_password.html" class="forgot_password" md-colors="{background: 'grey-10'}"> Forgot password!!</a></div>
+								
+
+							</div>
+						</form>
+					</md-card-content>
+				</md-card>
+			</div>
+
+		</div>
+	</body>
 </html>
